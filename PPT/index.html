@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WAO PPT</title>
+<meta charset="utf-8">
+<style>
+  ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:#fff;
+    border-style:solid;
+    border-color:#606060;
+    border-width:1px;
+  }
+  
+  li{
+    float:left;
+
+  }
+  
+  li a, .dropbtn
+  {
+    display:inline-block;
+    color:#000000;
+    text-align:center;
+    padding:10px 10px;
+    text-decoration:none;
+  }
+  
+  li a:hover, .dropdown:hover
+  {
+    background-color:#dddddd;
+  }
+  
+  .dropdown
+  {
+    display:inline-block;
+  }
+  
+  .dropdown-content
+  {
+    display:none;
+    position:absolute;
+    background-color:#ffffff;
+    min-width:160px;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:999
+  }
+  
+  .dropdown-content a
+  {
+    color:black;
+    padding:12px 16px;
+    text-decoration:none;
+    display:block;
+  }
+  
+  .dropdown-content a:hover {background-color: #eee}
+  
+  .dropdown:hover .dropdown-content
+  {
+    display:block;
+  }
+  
+  .active
+  {
+    background-color:#CC3333;
+    color:#f0f0f0;
+  }
+
+  .active:hover {
+    background-color:#DC4343;
+    color:#ffffff;
+  }
+  button.tools{
+    height:30px;
+    border:none;
+    background-color:#f0f0f0;
+  }
+  button.tools:hover {
+    background-color:#dddddd;
+  }
+@page{size:6in 8in landscape}@media print{*{border:0 !important}}
+  </style>
+<script>
+function e(c){
+document.execCommand(c,false);
+}
+</script>
+</head>
+<body>
+<div>
+<ul>
+  <li><a class="active" href="../">WAO PPT</a></li>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">文件</a>
+    <div class="dropdown-content">
+      <a href="#">链接 1</a>
+      <a href="#">链接 2</a>
+      <a href="#">链接 3</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">关于</a>
+    <div class="dropdown-content">
+      <a href="#">链接 1</a>
+      <a href="#">链接 2</a>
+      <a href="#">链接 3</a>
+    </div>
+  </div>
+</ul>
+</div>
+<div style="padding:2px;border-style:none solid solid;border-color:#606060;border-width:1px;">
+  <button class="tools" onclick="e('Bold')"><b>B</b></button>
+  <button class="tools" onclick="e('Italic')"><i>I</i></button>
+  <button class="tools" onclick="e('Underline')"><u>U</u></button>
+  <button class="tools" onclick="e('StrikeThrough')"><s>S</s></button>
+  <button class="tools" onclick="e('JustifyLeft')">左</button>
+  <button class="tools" onclick="e('JustifyCenter')">中</button>
+  <button class="tools" onclick="e('JustifyRight')">右</button>
+  <button class="tools" onclick="e('outdent')">&lt;-</button>
+  <button class="tools" onclick="e('indent')">-&gt;</button>
+  <button class="tools" onclick="addPage()"> + 加页 </button>
+</div>
+<div style="height: calc(98vh - 82px);overflow-y:scroll;overflow-x:hidden;background:#f0f0f0;border:1px solid #606060" id="ppt">
+<script>
+d=document.getElementById("ppt");
+x=0;
+function addPage() {
+x+=1;
+d.innerHTML+='<text style="width:90%;margin:1% 6%;padding-top:60%;">第'+x.toString()+'页</text><div style="position:relative;width:90%;padding-top:60%;margin:1% 6%;border:1px solid #CC3333;background:#fff">'+'<div contenteditable style=outline:none;position:absolute;right:10%;bottom:10%;left:10%;top:10%;font-size:5vmin>';
+};
+for(i=0;i<1;i++){addPage();}
+</script>
+</div>
+</div>
+
+
+</body>
+</html>
