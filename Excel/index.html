@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WAO Excel</title>
+<meta charset="utf-8">
+<style>
+  ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:#f0f0f0;
+    border-style:solid;
+    border-color:#606060;
+    border-width:1px;
+  }
+  
+  li{
+    float:left;
+
+  }
+  
+  li a, .dropbtn
+  {
+    display:inline-block;
+    color:#000000;
+    text-align:center;
+    padding:10px 10px;
+    text-decoration:none;
+  }
+  
+  li a:hover, .dropdown:hover
+  {
+    background-color:#dddddd;
+  }
+  
+  .dropdown
+  {
+    display:inline-block;
+  }
+  
+  .dropdown-content
+  {
+    display:none;
+    position:absolute;
+    background-color:#ffffff;
+    min-width:160px;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a
+  {
+    color:black;
+    padding:12px 16px;
+    text-decoration:none;
+    display:block;
+  }
+  
+  .dropdown-content a:hover {background-color: #eee}
+  
+  .dropdown:hover .dropdown-content
+  {
+    display:block;
+  }
+  
+  .active
+  {
+    background-color:#4CAF50;
+    color:#f0f0f0;
+  }
+
+  .active:hover {
+    background-color:#6CCF70;
+    color:#ffffff;
+  }
+#t{border-collapse:collapse}td{border:1px solid gray;text-align:right}input{border:none;width:4rem;text-align:center}
+  </style>
+</head>
+<body>
+<div>
+<ul>
+  <li><a class="active" href="../">WAO Excel</a></li>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">文件</a>
+    <div class="dropdown-content">
+      <a href="#">链接 1</a>
+      <a href="#">链接 2</a>
+      <a href="#">链接 3</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">关于</a>
+    <div class="dropdown-content">
+      <a href="#">链接 1</a>
+      <a href="#">链接 2</a>
+      <a href="#">链接 3</a>
+    </div>
+  </div>
+</ul>
+</div>
+<div style="height: calc(98vh - 52px);overflow:scroll;">
+<table id=t></table>
+<script>
+z=Object.defineProperty,p=parseFloat;for(I=[],D={},C={},q=_=>I.forEach(e=>{try{e.value=D[e.id]}catch(e){}}),i=0;i<101;i++)for(r=t.insertRow(-1),j=0;j<27;j++)c=String.fromCharCode(65+j-1),d=r.insertCell(-1),d.innerHTML=i?j?"":i:c,i*j&&I.push(d.appendChild((f=>(f.id=c+i,f.onfocus=e=>f.value=C[f.id]||"",f.onblur=e=>{C[f.id]=f.value,q()},get=_=>{v=C[f.id]||"";if("="!=v.charAt(0))return isNaN(p(v))?v:p(v);with(D)return eval(v.slice(1))},a={get},z(D,f.id,a),z(D,f.id.toLowerCase(),a),f))(document.createElement`input`)))
+</script>
+  </div>
+</div>
+
+
+</body>
+</html>
