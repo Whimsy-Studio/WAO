@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WAO Word</title>
+<meta charset="utf-8">
+<style>
+  ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:#f0f0f0;
+    border-style:solid solid none;
+    border-color:#606060;
+    border-width:1px;
+  }
+  
+  li{
+    float:left;
+
+  }
+  
+  li a, .dropbtn
+  {
+    display:inline-block;
+    color:#000000;
+    text-align:center;
+    padding:10px 10px;
+    text-decoration:none;
+  }
+  
+  li a:hover, .dropdown:hover
+  {
+    background-color:#dddddd;
+  }
+  
+  .dropdown
+  {
+    display:inline-block;
+  }
+  
+  .dropdown-content
+  {
+    display:none;
+    position:absolute;
+    background-color:#ffffff;
+    min-width:160px;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a
+  {
+    color:black;
+    padding:12px 16px;
+    text-decoration:none;
+    display:block;
+  }
+  
+  .dropdown-content a:hover {background-color: #eee}
+  
+  .dropdown:hover .dropdown-content
+  {
+    display:block;
+  }
+  
+  .active
+  {
+    background-color:#0060ff;
+    color:#f0f0f0;
+  }
+  .active:hover {
+    background-color:#dddddd;
+    color:#000000;
+
+  }
+  button.tools{
+    height:30px;
+    border:none;
+    background-color:#f0f0f0;
+  }
+  button.tools:hover {
+    background-color:#dddddd;
+  }
+#word:focus {
+    border:1px solid #606060;
+}
+  </style>
+<script>
+function e(c){
+document.execCommand(c,false);
+}
+</script>
+</head>
+<body>
+<div>
+<ul>
+  <li><a class="active" href="../">WAO Word</a></li>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">文件</a>
+    <div class="dropdown-content">
+      <a href="#">链接 1</a>
+      <a href="#">链接 2</a>
+      <a href="#">链接 3</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">关于</a>
+    <div class="dropdown-content">
+      <a href="#">链接 1</a>
+      <a href="#">链接 2</a>
+      <a href="#">链接 3</a>
+    </div>
+  </div>
+</ul>
+</div>
+<div style="padding:2px;border-style:solid solid none;border-color:#606060;border-width:1px;">
+  <button class="tools" onclick="e('Bold')"><b>B</b></button>
+  <button class="tools" onclick="e('Italic')"><i>I</i></button>
+  <button class="tools" onclick="e('Underline')"><u>U</u></button>
+  <button class="tools" onclick="e('StrikeThrough')"><s>S</s></button>
+  <button class="tools" onclick="e('JustifyLeft')">左</button>
+  <button class="tools" onclick="e('JustifyCenter')">中</button>
+  <button class="tools" onclick="e('JustifyRight')">右</button>
+</div>
+<div>
+<div contenteditable style="line-height:1.5;font-size:20px;border:1px solid #606060;height:calc(98vh - 82px);padding:5px" id="word">
+  </div>
+</div>
+
+
+</body>
+</html>
